@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>08_js_date</title>
+</head>
+<body>
+<p id="date"></p>
+
+
+<script>
+	var a=new Date();
+	var b= new Date(2018, 02,14,19);
+	var c= new Date("april 14,2018 19:30:33");
+	var d=new Date(100000000000);
+	document.getElementById("date").innerHTML=a+"<br>"+b +"<br>"+c.toDateString()+"<br>"+d.toUTCString();
+
+
+</script>
+</body>
+</html>
