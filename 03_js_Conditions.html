@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>03_js_Conditions</title>
+</head>
+
+<body>
+
+<p>Hello User!</p>
+<p id="demon"></p>
+
+<button onclick="myF()">Try it</button>
+
+<p id="gre">good morning</p> 
+
+
+
+
+<script>
+	if(new Date().getHours()>14){
+		document.getElementById("demon").innerHTML="Good Evening";
+	}
+function myF(){
+		var greeting;
+		var time=new Date().getHours();
+		if(time<10){greeting="good morning"}
+		else if(time<20){greeting="afternoon"}
+	    else{greeting="evening"}
+	  document.getElementById("gre").innerHTML=greeting;
+	
+}
+</script>
+
+</body>
+</html>
