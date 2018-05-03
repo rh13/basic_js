@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>06_js_Function</title>
+</head>
+<body>
+<h2>Function</h2>
+
+<p id="demo"></p>
+
+<p id="temp2"></p>
+<p id="temp"></p>
+<script>
+	var mul=myF(4,3)
+	function myF(a,b) {
+		return a*b;
+	}
+	document.getElementById("demo").innerHTML=mul;
+
+	var c=toCelcious(77);
+	function toCelcious(f){
+		return (5/9)*(f-32)
+	}
+	document.getElementById("temp").innerHTML="Temp. F to C: " + c;
+	document.getElementById("temp2").innerHTML=toCelcious;
+</script>
+
+
+</body>
+</html>
