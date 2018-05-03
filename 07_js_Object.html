@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>07_js_Object</title>
+</head>
+<body>
+<p id="car"></p>
+<p id="person"></p>
+
+
+<script>
+	var car = {type:"Fiat", model:"500", color:"white"};
+    document.getElementById("car").innerHTML = "car type : "+
+    car.type + "<br>Model: " +car.model + "<br>Color: "+ car["color"];
+
+    var person={
+    	firstname:"Abraham",
+    	lastname:"Linkcoln",
+    	designation:"President",
+    	fullname:function(){
+    	return this.firstname+ " "+this.lastname;
+   
+    }
+};
+    document.getElementById("person").innerHTML=person.fullname();
+
+
+</script>
+
+
+</body>
+</html>
