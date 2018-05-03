@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>05_js_Elaboration.html</title>
+</head>
+
+<body>
+<h3>Numbers</h3>
+<p id="num"></p>
+
+<h3>Arrays</h3>
+<p id="array"></p>
+<p id="arr"></p>
+
+
+
+<h3>Strins</h3>
+<p id="str"></p>
+
+
+
+<script>
+	var x,y,z,f,sum,n,ze,h,list,txt,i,clen;
+	 x=3.1416;
+	 y=34;
+	 z=9999999999999999;
+	 f=0.2+0.1;
+	 sum=x+y+20;
+	 n=NaN+y;
+	 ze=x/0;
+	 h=0xFF;
+
+	document.getElementById("num").innerHTML= x+"<br>"+y+"<br> 999999999999999 may =="+z+"<br>"+f+"<br>"+sum +"<br>"+n+"<br>"+ze+"<br>"+h+"<br>"+(x==y)+"<br>";
+
+var cars=["Ferari","Audi","Lamborgini","BMW"];
+
+list="<ul>"
+for (i=0; i<cars.length;i++) {
+	list+="<li>"+cars[i]+"</li>";
+}
+list+="</ul>";
+
+var person={firstname:"John", lastname:"Abraham",age:35};
+document.getElementById("array").innerHTML=cars+"<br>Number of cars : "+cars.length+"<br>"+ person["firstname"]+"<br>"+list;
+
+cars.push("Nissan")
+document.getElementById("arr").innerHTML="After adding car: "+cars.join("*");
+
+
+var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var a = "We are the \n so-called \"Vikings\" from the north.";
+var b=new String("John");
+var c=new String("Äbraham");
+
+
+document.getElementById("str").innerHTML = "String length: " + txt.length+"<br>"+a+"<br>"+(b==c);
+</script>
+
+
+</body>
+</html>
