@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>09_js_json</title>
+</head>
+<body>
+
+	<h2>JSON String</h2>
+
+<p id="demo"></p>
+<p id="demon"></p>
+
+<script>
+var text = '{"employees":[' +
+'{"firstName":"John","lastName":"Doe" },' +
+'{"firstName":"Anna","lastName":"Smith"}]}';
+
+obj = JSON.parse(text);
+document.getElementById("demo").innerHTML =
+obj.employees[1].firstName + " " + obj.employees[1].lastName;
+
+//2nd JSON parse
+var myObj,myJson,text,obj;
+myObj = { "name":"John", "age":31, "city":"New York" };
+myJson = JSON.stringify(myObj);
+localStorage.setItem("testjson",myJson);
+
+//retriving data
+text=localStorage.getItem("testjson");
+obj=JSON.parse(text);
+document.getElementById("demon").innerHTML =obj.name;
+
+
+</script>
+</body>
+</html>
