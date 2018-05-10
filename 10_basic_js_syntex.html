@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>10_basic_js_syntex</title>
+</head>
+<body>
+
+<p>The <strong>local variable</strong> cannot be accessed from code outside the function:</p>
+<p id="car"></p>
+<STRONG>Global variable:</STRONG>
+<p id="car2"></p>
+<p id="name"></p>
+
+<strong>Error Handling<br></strong>
+<p>Enter 5-10:<br></p>
+<input id="msg" type="text">
+<button type="button" onclick="check()">Test Input</button>
+<p id="msg2"></p>
+
+<strong>json to js object</strong>
+<p id="demo"></p>
+
+<strong>js object to string</strong>
+<p id="demon"></p>
+
+
+
+<script>
+//local Variable
+myCar();
+document.getElementById("car").innerHTML =
+"The type of carName is " + typeof carName;
+
+//global variale
+function myCar() {
+    var carName = "Volvo";
+}
+
+var carName2 = "Volvo";
+myCar();
+function myCar() {
+	var car3="ferari"
+	document.getElementById("car2").innerHTML =
+"The type of carName is " + carName2 +" "+car3;
+}
+
+//this
+this.myString = 'Likhon!';  
+console.log(myString);
+
+// Constructor
+function Person(firstName,lastName,age,eyeColor) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+    this.eyeColor = eyeColor;
+    this.changeName = function (name) {
+        this.firstName = name;
+    }
+}
+
+var myName = new Person("RH","Likhon",24,"black");
+myName.changeName("TS");
+
+document.getElementById("name").innerHTML =
+"First name is " + myName.firstName;
+
+//new function
+var sum = new Function('a', 'b', 'return a + b');
+console.log(sum(2, 6));
+
+
+
+
+//eror handling
+
+function check(){
+var msg,x;
+msg=document.getElementById("msg2");
+msg.innerHTML="";
+x=document.getElementById("msg").value;
+try{
+	if(x=="") throw "empty";
+	if(isNaN(x)) throw "not a number";
+	x=Number(x);
+	if (x<5) throw "too low";
+	if (x>10) throw "too high";
+	else throw x;
+}
+catch(err){
+	msg.innerHTML="Input is "+err;
+}
+}
+
+
+//json to js object
+var myJSON = '{ "name":"John", "age":31, "city":"New York" }';
+var myObj = JSON.parse(myJSON);
+document.getElementById("demo").innerHTML = myObj.name;
+
+//js object to json string
+var obj = { "name":"John", "age":30, "city":"New York"};
+var myJSON = JSON.stringify(obj);
+document.getElementById("demon").innerHTML = myJSON;
+	//local variable
+
+</script>
+
+
+</body>
+</html>
+
